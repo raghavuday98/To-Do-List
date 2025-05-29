@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #603813;  /* fallback for old browsers */
+background: -webkit-linear-gradient(135deg, #b29f94, #603813);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(135deg, #b29f94, #603813); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #fff;
+}
+
+.app {
+    background: #1b160f;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 20px;
+    padding: 2rem;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+main h2 {
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: #1b160f;
+    z-index: 10;
+    padding: 0.5rem 0;
+}
+
+.inputDiv {
+    display: flex;
+    position: sticky;
+    top: 2.8rem;
+    background-color: #1b160f;
+    z-index: 10;
+    padding-bottom: 1rem;
+}
+
+.task-input {
+    width: 50%;
+    padding: 0.8rem;
+    background: #2c2518;
+    border: 1px solid #5c4d2e;
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+}
+
+.addBtn {
+    height: 3rem;
+    width: 5rem;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    background-color: #d6a83c;
+    border: none;
+    color: #1b160f;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 6.8rem;
+    background-color: #1b160f;
+    z-index: 10;
+    padding-bottom: 1rem;
+}
+
+.tabs button {
+    background: none;
+    border: none;
+    color: #c2b890;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+.tabs .active {
+    border-bottom: 2px solid #d6a83c;
+}
+
+button:focus, button:active {
+  outline: none; /* optional */
+  border-bottom: 2px solid #d6a83c; /* underline effect */
+}
+
+.task-container {
+    flex: 1;
+    overflow: auto;
+    border: 1px solid #444;
+    padding: 0.5rem;
+    border-radius: 10px;
+    max-height: 45vh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.task-list {
+    display: block;
+    /* show all by default */
+}
+
+.activeTaskList,
+.completedTaskList {
+    display: none;
+    /* hide these initially */
+}
+
+.task-list,
+.activeTaskList,
+.completedTaskList {
+    width: 100%;
+    list-style: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+
+.task-list li,
+.activeTaskList li,
+.completedTaskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+    color: #ddd;
+    transition: all 0.3s ease-in-out;
+}
+
+.task-list input,
+.activeTaskList input,
+.completedTaskList input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #d6a83c;
+}

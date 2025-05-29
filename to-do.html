@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMaster</title>
+    <link rel="stylesheet" href="to-do.css" />
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <h1>TaskMaster</h1>
+            <div class="profile">
+                <img src="user.jpg" alt="User" />
+            </div>
+        </header>
+
+        <main>
+            <h2>My Tasks</h2>
+
+            <div class="inputDiv">
+                <input type="text" placeholder="Add a new task" class="task-input" />
+                <button class="addBtn" onclick="addTask()">Add</button>
+            </div>
+
+            <div class="tabs">
+                <button class="allTask" onclick="allTask()">All</button>
+                <button class="activeBtn" onclick="activeTask()" >Active</button>
+                <button class="completedBtn" onclick="completedTask()">Completed</button>
+            </div>
+
+            <div class="task-container">
+                <ul class="task-list" style="display: block;"> </ul>
+                <ul class="activeTaskList" style="display: none;"></ul>
+                <ul class="completedTaskList" style="display: none;"></ul>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="to-do.js"></script>
+</body>
+
+</html>
